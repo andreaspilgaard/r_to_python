@@ -25,4 +25,6 @@ cars.query("model.str.contains('Maz')", engine='python')
 
 # call variable within query
 selected_gears = [1, 2, 3]
+selected_var = "gear"
+
 cars.query("gear in @selected_gears")
