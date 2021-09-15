@@ -35,5 +35,5 @@ cars.groupby(["gear"], as_index=False). \
 cars.groupby(["gear"], as_index=False). \
     agg(rows=("model", "count"),
         mean_miles_pr_gallon=("mpg", np.mean),
-        mean_km_pr_liter=("mpg", lambda x: np.mean(x * 1.609344 / 3.78541178))
+        mean_km_pr_liter=("mpg", lambda x: np.mean(x) * 1.609344 / 3.78541178)
         )
