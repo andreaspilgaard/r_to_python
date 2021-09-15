@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from settings import project_settings
+from utilities.settings import project_settings
 
 # Running project settings
 project_settings()
