@@ -31,10 +31,9 @@ cars.groupby(["gear"], as_index=False). \
     agg(observations=pd.NamedAgg(column="model",
                                  aggfunc="count"))
 
-# 4 Control of output names (F)
+# 4 Control of output names (F) and use own function
 cars.groupby(["gear"], as_index=False). \
     agg(rows=("model", "count"),
-        mean=("mpg", np.mean)
+        mean_miles_pr_gallon=("mpg", np.mean),
+        mean_km_pr_liter=("mpg", lambda x: np.mean(x * 1.609344 / 3.78541178))
         )
-
-
