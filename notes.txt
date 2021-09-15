@@ -1,0 +1,3 @@
+# Export env anaconda
+# 1 Go to env run command in cmd:
+conda env export --no-builds | grep -v "^prefix: " > requirements.yml
